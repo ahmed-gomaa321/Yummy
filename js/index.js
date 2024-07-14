@@ -592,7 +592,7 @@ function enableButton() {
         document.getElementById("buttonId").removeAttribute("disabled");
     }
     else {
-        document.getElementById("buttonId").setAttribute("disabled");
+        document.getElementById("buttonId").setAttribute("disabled", true);
     }
 }
 
