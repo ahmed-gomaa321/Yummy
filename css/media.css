@@ -1,0 +1,26 @@
+/* xs */
+@media (max-width: 575px) {
+    .display-meals,
+    .display-inputs{
+        width: 75%;
+        margin-left: auto;
+    }
+    .display-inputs input::placeholder{
+        font-size: .625rem;
+    }
+}
+
+/* sm */
+@media (min-width: 576px) {}
+
+/* Md */
+@media (min-width: 768px) {}
+
+/* Lg */
+@media (min-width: 992px) {}
+
+/* xl */
+@media (min-width: 1200px) {}
+
+/* xxl */
+@media (min-width: 1400px) {}

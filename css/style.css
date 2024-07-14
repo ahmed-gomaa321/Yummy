@@ -1,0 +1,104 @@
+/* body{
+    overflow: hidden;
+} */
+.loading{
+    display: flex; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999999;
+    background-color: black;
+}
+.loader {
+    width: 80px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: 8px solid lightblue;
+    border-right-color: orange;
+    animation: l2 1s infinite linear;
+}
+@keyframes l2 {to{transform: rotate(1turn)}}
+
+i{
+    cursor: pointer;
+}
+/* navbar */
+#sideNav{
+    left: 0;
+    top: 0;
+    bottom: 0;
+}
+.aside-img{
+    width: 50px;
+}
+#nameSearch::placeholder,
+#letterSearch::placeholder{
+    color: white;
+    opacity: 0.5;
+}
+
+.card-layer{
+    background-color: rgba(255, 255, 255, 0.7);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: translateY(105%);
+    transition: 0.5s;
+}
+.card:hover .card-layer{
+    transform: translateY(0%);
+}
+
+.img-cursor{
+    cursor: pointer;
+}
+/* ####################### */
+input
+{
+    background-color: transparent !important;
+    color: white !important;
+}
+input::placeholder
+{
+    color: white !important;
+}
+#contact input
+{
+    background-color: white !important;
+    color: black !important;
+}
+#contact input::placeholder
+{
+    color:  gray !important;
+}
+#contact p
+{
+    display: none;
+}
+#contact .form-control:focus
+{
+    border-color: #d99c39;
+    box-shadow: 0 0 0 0.25rem var(#fec26055);
+}
+#contact .form-control.is-invalid:focus
+{
+    border-color: var(#dc3545);
+    box-shadow: 0 0 0 0.25rem var(#fec26055);
+}
+#contact .is-valid:focus
+{
+    border-color: var(#198754);
+    box-shadow: 0 0 0 0.25rem var(#19875440);
+}
+
+.ingredientList{
+    background-color: #cff4fc;
+    color: #055160;
+}
+.tagList{
+    background-color: #f8d7da;
+    color: #842029;
+}
