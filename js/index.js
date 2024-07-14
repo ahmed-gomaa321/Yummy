@@ -134,7 +134,7 @@ function displayMeals(data) {
 
 // event on input search by name
 $('#nameSearch').on('input', async function () {
-    if ($('#nameSearch').val() == null) {
+    if ($('#nameSearch').val() == "") {
         return;
     }
     let data = await searchByName($('#nameSearch').val());   //array 
@@ -162,7 +162,7 @@ async function searchByFirstLetter(letter) {
 
 // event on input search by first letter
 $('#letterSearch').on('input', async function () {
-    if ($('#letterSearch').val() == null) {
+    if ($('#letterSearch').val() == "") {
         return;
     }
     let data = await searchByFirstLetter($('#letterSearch').val());   //array 
@@ -463,7 +463,7 @@ $('#contactLink').on('click', function (e) {
 
 // check name validation
 function checkName() {
-    let namevalidation = /^[a-zA-Z ]{3,15}$/;
+    let namevalidation = /^[a-zA-Z ]{3,25}$/;
     return namevalidation.test($("#nameInput").val());
 }
 
