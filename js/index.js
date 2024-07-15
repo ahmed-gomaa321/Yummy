@@ -1,4 +1,4 @@
-// ################################################## sideNav ##########################################################
+// ############################################## sideNav ######################################################
 const btnBars = $('#btnBars');
 const btnX = $('#btnX');
 const mainNav = $('#mainNav');
@@ -39,20 +39,11 @@ function closeSideNav() {
 }
 // Click event for btnX
 btnX.on('click', closeSideNav);
-
-$(".aside-btn").on('click', () => {
-    if ($('#sideNav').css("left") == "0px") {
-        closeSideNav()
-    } else {
-        openSideNav()
-    }
-})
-
 // #######################################
 // show loader
 function showLoder() {
     $(function () {
-        $('.loading').fadeIn(500 , function () {
+        $('.loading').fadeIn(500, function () {
             $('body').css({ 'overflow': 'hidden' })
         })
     })
@@ -118,7 +109,7 @@ async function searchByName(name) {
 function displayMeals(data) {
     let box = '';
     for (let i = 0; i < data.length; i++) {
-        box += `
+        box += ` 
             <div class="col-md-3 py-3 display-meals">
                 <div onclick="mealDetails('${data[i].idMeal}')" class="card img-cursor rounded border-0 position-relative overflow-hidden">
                     <img src="${data[i].strMealThumb}" class="card-img-top" alt="${data[i].strMeal}">
@@ -394,6 +385,7 @@ async function mealDetails(id) {
         data = data.meals;
         console.log(data);
         displayMealDetails(data);
+        closeSideNav();
         hideLoder();
     } catch (err) {
         console.log("error", err)
@@ -437,7 +429,7 @@ function displayMealDetails(data) {
                 <h3 class="mb-3">Tags :</h3>
                 <ul id="tagId" class="d-flex flex-wrap g-5 list-unstyled">
                     <li class="py-1 px-2 rounded tagList">
-                        ${data[i].strTags ? data[i].strTags.split(",") : 'no tags'}
+                        ${data[i].strTags ? data[i].strTags.split(",").join(", ") : 'no tags'}
                     </li>
                 </ul>
                 <a href="${data[i].strSource}" target="_blank" class="btn btn-success me-1">Source</a>
